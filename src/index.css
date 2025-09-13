@@ -2,41 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Wellness Platform Design System - Calming & Healing Colors
+All colors MUST be HSL for proper theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Soft, calming foundation */
+    --background: 220 25% 98%;
+    --foreground: 215 25% 15%;
 
+    /* Card system - Clean surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
+    /* Popover system */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Calming teal/blue for trust and peace */
+    --primary: 194 65% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 194 65% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft lavender for gentle accents */
+    --secondary: 260 20% 92%;
+    --secondary-foreground: 215 25% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones - Subtle backgrounds */
+    --muted: 220 15% 95%;
+    --muted-foreground: 215 15% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm coral for positive interactions */
+    --accent: 340 75% 75%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Nature green for achievements */
+    --success: 142 60% 50%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning - Gentle amber */
+    --warning: 38 85% 60%;
+    --warning-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    /* Destructive - Soft red, less alarming */
+    --destructive: 0 65% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs - Subtle definition */
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 194 65% 45%;
+
+    /* Wellness-specific colors */
+    --wellness-calm: 200 60% 85%;
+    --wellness-energy: 150 50% 75%;
+    --wellness-balance: 280 40% 80%;
+
+    /* Beautiful gradients for wellness vibes */
+    --gradient-hero: linear-gradient(135deg, hsl(194 65% 45%), hsl(260 60% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 25% 96%));
+    --gradient-wellness: linear-gradient(120deg, hsl(194 65% 55%), hsl(340 75% 80%));
+    --gradient-calm: linear-gradient(180deg, hsl(200 60% 90%), hsl(220 25% 98%));
+
+    /* Elegant shadows with wellness theme */
+    --shadow-soft: 0 4px 20px -2px hsl(194 65% 45% / 0.1);
+    --shadow-wellness: 0 8px 32px -4px hsl(194 65% 45% / 0.15);
+    --shadow-glow: 0 0 40px hsl(194 65% 55% / 0.2);
+
+    /* Smooth transitions for mental wellness */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +139,38 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Wellness utility classes */
+  .wellness-gradient {
+    background: var(--gradient-wellness);
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .calm-gradient {
+    background: var(--gradient-calm);
+  }
+
+  .shadow-wellness {
+    box-shadow: var(--shadow-wellness);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
   }
 }
